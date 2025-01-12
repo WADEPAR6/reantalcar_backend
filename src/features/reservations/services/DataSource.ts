@@ -1,4 +1,3 @@
-import { AxiosInstance } from "axios";
 import {
   IReservation,
   IReservationData,
@@ -68,6 +67,7 @@ export class ReservationDataSourceImpl implements DataSource {
 
   async deleteReservation(id: number): Promise<void> {
     const response = await this.httpClient.delete(`api/v1/reservations/${id}`);
+    console.log(response);
   }
 
   static getInstance(): DataSource {

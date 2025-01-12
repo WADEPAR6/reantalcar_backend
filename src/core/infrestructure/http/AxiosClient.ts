@@ -2,14 +2,13 @@ import { HttpHandler } from "@/core/interfaces/HttpHandler";
 import { HTTP_STATUS_CODES } from "@/core/providers/HttpStatusCodes";
 import { getToken } from "@/core/providers/TokenUtils";
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import { Console } from "console";
 import toast from "react-hot-toast";
 
 export class AxiosClient implements HttpHandler {
   private static instance: AxiosClient;
   private axiosInstance: AxiosInstance;
   private static readonly baseUrl: string =
-    process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    process.env.NEXT_PUBLIC_API_URL || "http://192.168.100.13:3000";
   private static accessToken: string | null = null;
 
  private constructor() {
@@ -18,7 +17,7 @@ export class AxiosClient implements HttpHandler {
       headers: {
         "Content-Type": "application/json",
       },
-      withCredentials: true, // Importante para cookies
+      withCredentials: true,
     });
 
     this.axiosInstance.interceptors.request.use(
@@ -87,7 +86,7 @@ export class AxiosClient implements HttpHandler {
 
   public async post<T>(
     url: string,
-    data: any,
+    data: unknown,
     config?: AxiosRequestConfig
   ): Promise<T> {
     const promise = this.axiosInstance.post<T>(url, data, config);
@@ -97,7 +96,7 @@ export class AxiosClient implements HttpHandler {
 
   public async put<T>(
     url: string,
-    data: any,
+    data: unknown,
     config?: AxiosRequestConfig
   ): Promise<T> {
     const promise = this.axiosInstance.put<T>(url, data, config);

@@ -7,11 +7,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { IRental, IRentalResponse, RentalStatus } from "../../models/IRental";
 import { Pencil, Trash2 } from "lucide-react";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { useRentalView } from "../../hooks/userRentalView";
+import { IRentalResponse, RentalStatus } from "../../models/IRental";
 
 interface RentalsTableProps {
   rentals: IRentalResponse[];

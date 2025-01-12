@@ -1,6 +1,5 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { SideBar } from "@/core/layout/dashboard/side-bar";
-import { Footer } from "@/core/layout/footer";
 import { NavBar } from "@/core/layout/navbar";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {

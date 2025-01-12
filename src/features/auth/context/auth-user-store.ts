@@ -4,9 +4,7 @@ import { IUser, IUserRegister } from "../../users/models/IUser";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { AuthDataSourceImpl } from "../services/DataSource";
 import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
 import { AxiosClient } from "@/core/infrestructure/http/AxiosClient";
-import { IRegister } from "../models/IRegister";
 
 export interface AuthStore {
   user: Partial<IUser> | null;
@@ -23,7 +21,7 @@ export const STORE_NAME = "user";
 
 export const UseAuthStore = create<AuthStore>(
   persist(
-    (set, get) => ({
+    (set) => ({
       user: DEFAULT_USER,
       loading: false,
       setUser: (user: IUser) => set({ user }),
@@ -33,6 +31,7 @@ export const UseAuthStore = create<AuthStore>(
           const user = await AuthDataSourceImpl.getInstance().login(data);
           set({ user, loading: false });
           return true;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
           toast.error("Usuario o contraseña incorrecta");
           return false
@@ -40,6 +39,7 @@ export const UseAuthStore = create<AuthStore>(
       },
       signup: async (data: IUserRegister) => {
         const user = await AuthDataSourceImpl.getInstance().signup(data);
+        console.log(user);
       },
       logout: () => {
         set({ user: DEFAULT_USER });

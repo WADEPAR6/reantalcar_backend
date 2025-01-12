@@ -1,6 +1,6 @@
 import { Controller, useFieldArray, useForm } from "react-hook-form";
 import { useRentalForm } from "../../hooks/useRentalForm";
-import { IRental, IRentalCreate, IRentalUpdate, Damage, RentalStatus, IRentalResponse } from "../../models/IRental";
+import { IRentalCreate, IRentalUpdate, Damage, RentalStatus, IRentalResponse } from "../../models/IRental";
 import { yupResolver } from "@hookform/resolvers/yup";
 import {
     Select,
@@ -37,8 +37,7 @@ export const RentalForm = ({ currentRental, id }: { currentRental?: IRentalRespo
         control,
         register,
         formState: { errors },
-        handleSubmit,
-        watch
+        handleSubmit
     } = useForm<FormData>({
         resolver: yupResolver(validationSchema),
         defaultValues: defaultValues as FormData
@@ -73,7 +72,7 @@ export const RentalForm = ({ currentRental, id }: { currentRental?: IRentalRespo
                 rate_id: data.rate_id,
                 final_odometer: 0
             };
-            onSubmit(createData, id);
+            onSubmit(createData);
         }
     };
 

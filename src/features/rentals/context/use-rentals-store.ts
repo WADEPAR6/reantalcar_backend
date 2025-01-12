@@ -1,4 +1,4 @@
-import { IRental, IRentalCreate, IRentalResponse, IRentalUpdate } from "../models/IRental";
+import { IRentalCreate, IRentalResponse, IRentalUpdate } from "../models/IRental";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { create, StateCreator } from "zustand";
 import { RentalDataSourceImpl } from "../services/DataSource";
@@ -26,6 +26,7 @@ export const useRentalStore = create<RentalStore>(
                     set({ rentals });
                 } catch (error) {
                     set({ error: 'Error fetching rentals' });
+                    throw error;
                 }
             },
 
@@ -45,6 +46,7 @@ export const useRentalStore = create<RentalStore>(
                     set({ rentals: [...get().rentals, newRental] });
                 } catch (error) {
                     set({ error: 'Error creating rental' });
+                    console.error(error);
                 }
             },
 
@@ -58,6 +60,7 @@ export const useRentalStore = create<RentalStore>(
                     });
                 } catch (error) {
                     set({ error: 'Error updating rental' });
+                    console.error(error);
                 }
             },
 
@@ -69,6 +72,7 @@ export const useRentalStore = create<RentalStore>(
                     });
                 } catch (error) {
                     set({ error: 'Error deleting rental' });
+                    console.error(error);
                 }
             },
         }),

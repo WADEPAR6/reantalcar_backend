@@ -7,17 +7,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useEffect } from "react";
-import { Pencil, Trash, Trash2, Eye } from "lucide-react";
-import { useReservationView } from "../../hooks/useReservationView";
 import { IReservationResponse } from "../../models/IReservation";
 import { UseAuthStore } from "@/features/auth/context/auth-user-store";
 import Link from "next/link";
+import { Eye } from "lucide-react";
 interface ReservationsTableProps {
     reservations: IReservationResponse[]
 }
 export const ReservationTable = ({ reservations }: ReservationsTableProps) => {
-  const { onDelete, onEdit } = useReservationView();
      const {user} = UseAuthStore()
   return (
     <div className="">

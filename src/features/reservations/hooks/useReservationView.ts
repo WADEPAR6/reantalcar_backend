@@ -1,6 +1,5 @@
 import { useRouter } from "next/navigation";
 import { useReservationStore } from "../context/reservation-store"
-import { IReservationData } from "../models/IReservation";
 
 export const useReservationView = () => {
     const {deleteReservation } = useReservationStore();

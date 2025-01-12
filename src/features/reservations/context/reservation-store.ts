@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { create, StateCreator } from "zustand";
 import {
-  IReservation,
   IReservationData,
   IReservationResponse,
 } from "../models/IReservation";

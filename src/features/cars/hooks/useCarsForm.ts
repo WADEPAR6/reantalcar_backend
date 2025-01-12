@@ -37,6 +37,7 @@ export const useCarForm = (currentCar?: Partial<ICar>) => {
   });
 
   const onSubmit = (values: Partial<ICar>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     currentCar !== undefined
       ? updateCar(currentCar.id ?? 0, values)
       : addCar(values);

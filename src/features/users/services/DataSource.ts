@@ -2,8 +2,6 @@ import { HttpHandler } from "@/core/interfaces/HttpHandler";
 import { IUser, IUserCreate} from "../models/IUser";
 import { AxiosClient } from "@/core/infrestructure/http/AxiosClient";
 import { UserAdapter } from "../adapters/UserAdapter";
-import toast from "react-hot-toast";
-import { IAuthResponse } from "@/features/auth/models/IAuth";
 import { IRegisterResponse } from "@/features/auth/models/IRegister";
 
 interface DataSource {
@@ -47,6 +45,7 @@ export class UserDataSourceImpl implements DataSource {
 
   async deleteUser(id: number): Promise<void> {
     const response = await this.httpClient.delete(`api/v1/users/${id}`);
+    console.log(response);
   }
 
   static getInstance(): DataSource {

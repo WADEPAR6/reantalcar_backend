@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // context/rate-store.ts
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Suspense } from 'react';
 import { ChangePassForm } from "../components/change-pass-form";
 
 export const ChangePassView = () => {
@@ -13,7 +13,9 @@ export const ChangePassView = () => {
           Ingresa tu nueva contraseña{" "}
         </h2>
       </div>
-      <ChangePassForm />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ChangePassForm />
+      </Suspense>
     </div>
   );
 };

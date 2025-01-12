@@ -1,8 +1,8 @@
 import { IAuthResponse } from "../models/IAuth";
-import { IRegister } from "../models/IRegister";
+import { IUser } from "../models/IUser";
 
-export class AuthAdapter {
-  static toDomain(data: IAuthResponse): IRegister {
+export class UserAdapter {
+  static toDomain(data: IAuthResponse): IUser {
     return {
       id: data.status.data.id,
       email: data.status.data.email,
@@ -13,7 +13,7 @@ export class AuthAdapter {
       phone: data.status.data.phone,
       birthdate: data.status.data.birthdate,
       username: data.status.data.username,
-      role: data.status.data.role
+      role: data.status.data.role,
     };
   }
 }

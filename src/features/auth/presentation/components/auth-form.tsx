@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import { useRegister } from "../../hooks/useRegister";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { IUser, IUserRegister } from "../../../users/models/IUser";
+import { IUserRegister } from "../../../users/models/IUser";
 import Link from "next/link";
 
 export const AuthForm = () => {

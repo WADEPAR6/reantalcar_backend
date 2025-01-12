@@ -2,7 +2,6 @@
 import { usePathname } from "next/navigation"
 import { useRouter } from "next/navigation";
 import { useCarStore } from "../context/car-store";
-import { useEffect } from "react";
 
 export const useCarView = () => {
     const router = useRouter();

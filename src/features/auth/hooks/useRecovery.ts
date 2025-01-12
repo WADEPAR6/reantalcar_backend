@@ -19,6 +19,7 @@ export const useRecovery = () => {
             toast.success('Correo enviado con éxito')
         } catch (error) {
             toast.error('Error al enviar el correo')
+            console.error(error)
         }
     }
     return {

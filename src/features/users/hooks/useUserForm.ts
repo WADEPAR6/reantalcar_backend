@@ -2,7 +2,6 @@ import * as yup from "yup";
 import { IUser, IUserCreate } from "../models/IUser";
 import { lastDayOfDecade } from "date-fns";
 import { useUserStore } from "../context/user-store";
-import { IRegister } from "@/features/auth/models/IRegister";
 import { useRouter } from "next/navigation";
 
 export const useUserForm = (currentUser?: Partial<IUser>) => {
@@ -33,6 +32,7 @@ birthdate: currentUser?.birthdate ? new Date(currentUser.birthdate) : new Date()
   })
 
   const onSubmit = (values: IUserCreate) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     currentUser ? updateUser(currentUser.id as number, values): createUser(values)
     router.push('/dashboard/users/view')
   }

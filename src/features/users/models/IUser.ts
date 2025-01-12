@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { IRegister } from "@/features/auth/models/IRegister";
 
 export interface IUser {

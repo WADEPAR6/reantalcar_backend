@@ -1,8 +1,5 @@
 'use client'
-import { Nav } from "@/core/layout/dashboard/nav";
 import { NavBar } from "@/core/layout/navbar";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
  return (

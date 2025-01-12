@@ -17,7 +17,6 @@ interface CarStore {
 }
 
 const STORE_NAME = 'car';
-const DEFAULT_CARS: ICar[] = [];
 
 export const useCarStore = create<CarStore>(
     persist(

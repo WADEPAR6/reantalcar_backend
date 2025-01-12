@@ -1,6 +1,5 @@
 "use client";
 import { UseAuthStore } from "@/features/auth/context/auth-user-store";
-import { User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

@@ -7,8 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Pencil, Trash, Trash2 } from "lucide-react";
-import Image from "next/image";
+import { Pencil, Trash2 } from "lucide-react";
 import { useUserView } from "../../hooks/useUserView";
 import { IUser } from "../../models/IUser";
 interface usersTableProps {

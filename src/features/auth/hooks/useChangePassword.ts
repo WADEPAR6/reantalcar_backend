@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 import { AuthDataSourceImpl } from '../services/DataSource'
-import { IRecoveryEmail, IRecoveryPassword } from '../models/IRecovery'
+import {  IRecoveryPassword } from '../models/IRecovery'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 
@@ -26,6 +26,7 @@ export const useChangePassword = () => {
             toast.success('Contraseña cambiada con éxito')
         } catch (error) {
             toast.error('Error al cambiar la contraseña') 
+            console.error(error)
         }
     }
     return {

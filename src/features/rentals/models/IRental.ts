@@ -10,7 +10,7 @@ export interface IRental {
     damages?:            Damage[];
 }
 
-export interface IRentalCreate extends Omit<IRental, "id" | "actual_refund_date"> {}
+export type IRentalCreate = Omit<IRental, "id" | "actual_refund_date">
 
 export interface IRentalUpdate extends IRental {
     damages:            Damage[];
@@ -24,6 +24,10 @@ export interface Damage {
 export enum RentalStatus {
     GOOD = 0,
     BAD = 1,
+    AVAILABLE,
+    UNAVAILABLE,
+    DAMAGED,
+    RESERVED,
 }
 
 export interface IRentalResponse {

@@ -5,9 +5,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import {
   Sidebar,
-  SidebarContent,
   SidebarGroup,
-  SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,

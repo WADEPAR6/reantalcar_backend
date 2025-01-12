@@ -118,7 +118,7 @@ export const CarsFilterComponent = ({
                   name="min_price"
                   value={rate}
                   checked={filterValues.min_price?.[0] === rate}
-                  onChange={(e) =>
+                  onChange={() =>
                     handleInputChange("min_price", rate)
                   }
                 />
@@ -136,7 +136,7 @@ export const CarsFilterComponent = ({
                   name="max_price"
                   value={rate}
                   checked={filterValues.max_price?.[0] === rate}
-                  onChange={(e) =>
+                  onChange={() =>
                     handleInputChange("max_price", rate)
                   }
                 />

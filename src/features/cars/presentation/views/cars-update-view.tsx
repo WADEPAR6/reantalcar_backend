@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-wrapper-object-types */
 import { useCarStore } from "../../context/car-store"
 import { CarsFrom } from "../components/cars-form"
 

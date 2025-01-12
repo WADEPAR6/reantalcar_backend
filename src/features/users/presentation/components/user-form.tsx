@@ -1,7 +1,7 @@
 "use client";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { IUser, IUserRegister, UserRoles } from "../../../users/models/IUser";
+import { IUser, UserRoles } from "../../../users/models/IUser";
 import { useUserForm } from "../../hooks/useUserForm";
 import {
   Select,

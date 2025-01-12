@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 export interface IRate {
     id:            number;
     car_type:      string;

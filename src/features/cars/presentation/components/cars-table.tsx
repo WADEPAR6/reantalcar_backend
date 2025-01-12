@@ -7,10 +7,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useCarStore } from "../../context/car-store";
-import { useEffect } from "react";
 import { ICar } from "../../models/ICar";
-import { Pencil, Trash, Trash2 } from "lucide-react";
+import { Pencil, Trash2 } from "lucide-react";
 import { useCarView } from "../../hooks/useCarView";
 import Image from "next/image";
 interface CarsTableProps {

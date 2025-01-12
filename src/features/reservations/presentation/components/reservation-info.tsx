@@ -1,6 +1,4 @@
 'use client'
-import { useCarStore } from "@/features/cars/context/car-store";
-import { useParams } from "next/navigation";
 import Image from "next/image";
 import { ICar } from "@/features/cars/models/ICar";
 import { Controller, useForm } from "react-hook-form";
@@ -31,7 +29,6 @@ export const ReservationInfo = ({ car, user_id }: IParams) => {
 const [showPayment, setShowPayment] = useState(false);
   const { initialValues, onSubmit, validationSchema } = useReservationForm();
   const {
-    register,
     formState: { errors },
     handleSubmit,
     control,

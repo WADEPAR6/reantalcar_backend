@@ -15,10 +15,6 @@ export const useCarFilter = () => {
     const onSubmit = (values: Partial<ICarFilter>) => {
         fetchCarsByFilters(values);
       };
-
-      const onReset = () => {
-        
-      }
       
 
     return {

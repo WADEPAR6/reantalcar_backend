@@ -1,10 +1,12 @@
-import { EmailVerificationComponent } from "../components/email-verification"
-
+import { Suspense } from "react";
+import { EmailVerificationComponent } from "../components/email-verification";
 
 export const EmailVerificationView = () => {
     return (
         <div>
-            <EmailVerificationComponent />
+            <Suspense fallback={<div>Loading...</div>}>
+                <EmailVerificationComponent />
+            </Suspense>
         </div>
-    )
-}
+    );
+};

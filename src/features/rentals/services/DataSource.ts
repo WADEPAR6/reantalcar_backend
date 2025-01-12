@@ -1,5 +1,5 @@
 import { HttpHandler } from "@/core/interfaces/HttpHandler";
-import { IRental, IRentalCreate, IRentalResponse, IRentalUpdate } from "../models/IRental";
+import { IRentalCreate, IRentalResponse, IRentalUpdate } from "../models/IRental";
 import { AxiosClient } from "@/core/infrestructure/http/AxiosClient";
 
 interface DataSource {

@@ -9,13 +9,11 @@ import { useSidebar } from "@/components/ui/sidebar";
 export const SideBar = () => {
   const { user } = UseAuthStore();
   const {
-    state,
     open,
     setOpen,
     openMobile,
     setOpenMobile,
     isMobile,
-    toggleSidebar,
   } = useSidebar();
 
   const handleToggle = () => {

@@ -24,6 +24,7 @@ export function middleware(request: NextRequest) {
     });
 
     if (matchingRoute) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const [_, allowedRoles] = matchingRoute;
       
       if (!allowedRoles.includes(decoded.role)) {
@@ -32,6 +33,7 @@ export function middleware(request: NextRequest) {
     }
 
     return NextResponse.next();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     // Si hay un error al decodificar el token
     return NextResponse.redirect(new URL('/login', request.url));

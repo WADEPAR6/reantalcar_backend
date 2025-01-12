@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { HttpHandler } from "@/core/interfaces/HttpHandler"
 import { IAuth, IAuthResponse } from "../models/IAuth"
 import { AxiosClient } from "@/core/infrestructure/http/AxiosClient"
-import { IUser } from "../../users/models/IUser"
 import { setToken } from "@/core/providers/TokenUtils"
 import { IRecoveryEmail, IRecoveryPassword } from "../models/IRecovery"
 import { AuthAdapter } from "../adapters/AuthAdapter"

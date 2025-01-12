@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { IRental, IRentalCreate, IRentalUpdate, Damage, RentalStatus } from "../models/IRental";
+import { IRental, IRentalCreate, IRentalUpdate, RentalStatus } from "../models/IRental";
 import { useRouter } from "next/navigation";
 import { useRentalStore } from "../context/use-rentals-store";
 
@@ -72,11 +72,7 @@ export const useRentalForm = (currentRental?: IRental) => {
         )
     });
 
-    const onSubmit = (values: IRentalCreate | IRentalUpdate, reservation_id?: number) => {
-        const rentalValues = {
-            ...values,
-            reservation_id
-        };
+    const onSubmit = (values: IRentalCreate | IRentalUpdate) => {
         if ('damages' in values) {
             // Es una actualización
             updateRental(currentRental!.reservation_id, values as IRentalUpdate);

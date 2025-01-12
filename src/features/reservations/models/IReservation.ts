@@ -9,7 +9,7 @@ export interface IReservation {
     refund_date:      Date;
 }
 
-export interface IReservationData extends Omit<IReservation, 'id'>{}
+export type IReservationData = Omit<IReservation, 'id'>
 
 export interface IReservationResponse {
     id:                 number;

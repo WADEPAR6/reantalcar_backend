@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useReservationStore } from "../../context/reservation-store"
 import { ReservationTable } from "../components/reservations-table";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export const ReservationsListView = () => {
@@ -11,7 +10,7 @@ export const ReservationsListView = () => {
 
     useEffect(() => {
         fetchAllReservationsByUser()
-    },[])
+    },[fetchAllReservationsByUser])
 
     return(
         <div className="flex flex-col">

@@ -2,7 +2,7 @@ import React from "react";
 import { Mail } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useVerifyEmail } from "../../hooks/useVerifyEmail";
 
 export const EmailVerificationComponent = () => {

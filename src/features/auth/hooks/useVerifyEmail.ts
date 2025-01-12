@@ -12,6 +12,7 @@ export const useVerifyEmail = () => {
             router.push('/login')
         } catch (error) {
             toast.error('Error al verificar el email') 
+            console.error(error)
         }
     }
 
